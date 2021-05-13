@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: svc1
+spec:
+  type: NodePort  
+  selector: 
+      	name: thepods
+	app: multipod
+  ports:
+    - port: 80      
+      targetPort: 3000      
+    - port: 8080     
+      targetPort: 3001    
