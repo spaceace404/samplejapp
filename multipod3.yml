@@ -1,0 +1,14 @@
+kind: Pod 
+apiVersion: v1
+metadata:
+  name: multipod1
+  labels:
+    name: thepods
+    app: multipod1
+spec:
+       containers:
+        - name: cont1
+          image: ushopwell/sampleapp:22
+          ports:
+            - name: http
+              containerPort: 80
